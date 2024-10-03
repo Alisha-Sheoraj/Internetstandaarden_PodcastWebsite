@@ -1,0 +1,661 @@
+@font-face {
+    font-family: Bahnschrift;
+    src: url(fonts/BAHNSCHRIFT.TTF);
+  }
+@font-face {
+    font-family: BEATTECH;
+    src: url(fonts/BEATTECH-Line.ttf);
+  }
+@font-face {
+    font-family: PoppinsItalic;
+    src: url(fonts/Poppins-LightItalic.ttf);
+  }
+@font-face {
+    font-family: Regular;
+    src: url(fonts/Poppins-Regular.ttf);
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    background-color: #0d0c1d;
+    font-family: 'Regular', Bahnschrift, sans-serif;
+    color: #ffffff;
+  }
+
+h1{
+    font-family: "BEATTECH", Bahnschrift, sans-serif;
+    color: #ffffff;
+    font-size: 3em;
+    margin: -0.1em 0 0.5em 0;
+  }
+
+h2{
+    font-family: "BEATTECH", Bahnschrift, sans-serif;
+    color: #F86DA9;
+    font-size: 2.2em;
+  }
+
+h3{
+    font-family: 'Bahnschrift', Regular, sans-serif;
+    color: #F86DA9;
+  }
+
+
+/*Navigatie & Homepagina*/
+    /*De achtergronds afbeelding, met de naam : "BKG-afb_podcastwebsite.jpg"  die bij alle pagina's terug te vinden zijn, 
+    is afkomstig van Outsetstudio (https://outsetstudio.co/)*/
+.bkg{
+    width: 100%;
+    height: 120vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url(images/BKG-afb_podcastwebsite.jpg);
+    background-attachment: fixed;
+    background-color: #0d0c1d;
+    margin: 1em 0 5em 0;
+    position: relative;
+  }
+
+.bkg img{
+    width: 70vw;
+    margin: 1em 2em 0 13.5em;
+  }
+
+header{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0.7em 0 1em 0;
+  }
+
+header img {
+    width: 5em;
+    margin: 0.5em 5em 0.8em 2.5em;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+nav ul {
+    display: flex;
+    margin: 2.2em 20em 1.7em 20em;
+    padding: 0 0.9em 0 0.9em;
+  }
+
+nav li {
+    padding: 0 1.5em 0.2em 0;
+    font-family: 'Bahnschrift', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    list-style: none;
+  }
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+
+nav a:hover{
+    color: #F86DA9;
+  }
+
+nav a:focus{
+    color: #F86DA9;
+  }
+
+.log-in-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4em;
+    height: 4em;
+    padding: 0 1.5em 0 1.5em;
+    margin: 1.7em 2em 0 5em;
+    font-family: 'Bahnschrift', sans-serif;
+    font-size: 0.8em;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #232B6E;
+    border-radius: 50px;
+    border: 0;
+    transition: all 200ms ease-in;
+  }
+
+.log-in-btn:hover{
+    background-color: #F86DA9;  
+  }
+
+.log-in-btn:focus{
+    background-color: #F86DA9;  
+  }
+
+.nieuwstevideo-tekst{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 4.4em 0 0;
+    padding: 1em 0 1em 4em;
+  }
+
+.nieuwstevideo video{
+    margin-bottom:-0.1em ;
+  }
+
+.nieuwstevideo-tekst h1{
+    margin: 0 0 0.1em 0;
+    color: #F86DA9;
+  }
+
+.nieuwstevideo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #232B6E;
+    padding: 0 0 0 0;
+    width: 52.6vw;
+    position: relative;
+    top: -23vh;
+    left: 22vw;
+    border-radius: 12px;
+  }
+
+.nieuwstevideo:hover{
+    transform: scale(1.1);
+  }
+
+.intro-tekst{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 3em 0 0;
+    padding: 1em 0 1em 4em;
+  }
+
+.intro h1{
+    color: #F86DA9;
+  }
+  
+.intro img{
+    display: flex;
+    width: 23vw;
+  }
+
+.intro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: -3em 0 0 3em;
+  }
+/* Eind Navigatie & Homepagina*/
+
+
+/*Afleveringen pagina*/
+.afleveringen-intro{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 50vh;
+    width: 100%;
+    background: url(images/BKG-afb_podcastwebsite.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position:relative;
+    background-attachment: fixed;
+    background-color: #0d0c1d;
+    padding: 1em 0 1.5em 6em;
+  }
+
+.afleveringen-intro-tekst{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 3em 0 0 0;
+    padding: 0 10em 0 0;
+  }
+
+.afleveringen-intro img{
+    margin:  5em 14em 2em 0;
+    width: 20vw;
+  }
+
+.afleveringen-intro-tekst a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 4em;
+    box-sizing: border-box;
+    padding: 0 1.2em 0 1.2em;
+    margin: 1.2em 2em 0 -1em;
+    font-family: 'Bahnschrift', sans-serif;
+    font-size: 0.8em;
+    color: #ffffff;
+    font-weight: 350;
+    text-transform: uppercase;
+    background-color: #232B6E;
+    border-radius: 50px;
+    transition: all 100ms ease-in;
+  }
+
+.afleveringen-intro a:hover{
+    background-color: #F86DA9;  
+  }
+
+.afleveringen-intro a:focus{
+    background-color: #F86DA9;  
+  }
+
+.afleveringen-geschiedenis{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 6.6em 0 3em 73em;
+    gap: 1em;
+  }
+
+.gs:hover{
+    transform: scale(1.1);
+  }
+
+.afleveringen{
+    display: block;
+    margin: 7em 0 0 5em;
+    width: 60vw;
+  }
+
+.afl-tekst{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 3em 0 0;
+    padding: 1.3em 0 1em 2.5em;
+  }
+
+.afl{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #232B6E;
+    border-radius: 0 12px 12px 0;
+    margin: 3em 0 3em 0;
+  }
+
+.afl:hover{
+    transform: scale(1.1);
+  }
+/*Eind Afleveringen pagina*/
+
+
+/*Over Ons & Legal pagina*/
+.over-ons, .legal{
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 50vh;
+    width: 100%;
+    background: url(images/BKG-afb_podcastwebsite.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position:relative;
+    background-attachment: fixed;
+    background-color: #0d0c1d;
+    padding: 8em 0 3em 6.5em;
+    margin: 0 0 -7em 0;
+  }
+
+.legal-tekst h1{
+    margin: 0 0 0.2em 0;
+  }
+
+.legal-tekst p{
+    margin: 0 0 2em 0;
+  }
+.wiezijnwij{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    box-sizing: border-box;
+    padding: 6em 0 0 6em;
+    margin: 0 -2em 0 0;
+  }
+
+.wiezijnwijh2{
+    box-sizing: border-box;
+    margin: 7em 0 -2em 3.5em;
+    color: #F86DA9;
+  }
+
+.wzw{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 250vw;
+    margin: 0 5em 5.5em -3em;
+    padding: 1em 2em 3.5em 2em;
+    text-align:center;
+    background-color: #232B6E;
+    border-radius: 0 0 12px 12px;
+  }
+
+.wzw .eenimg{
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0 0 1em 0.5em;
+    padding: 0 0.6em 0 0 ;
+  }
+
+.insta-een, .insta-twee, .insta-drie{
+    width: 3.5vw;
+    margin: 4em 0 0 0;
+  }
+
+.insta-een:hover, .insta-twee:hover, .insta-drie:hover{
+    transform: scale(1.1);
+  }
+
+.legal-tekst{
+    margin: 0 0 3em 0;
+    padding: 0 0 3em 0;
+    width: 80%;
+  }
+/*Eind Over Ons pagina*/
+
+
+/*Login pagina*/
+/*Ik heb voor de volgende CSScode een Tutorial gebruikt van Dan Aleko : https://www.youtube.com/watch?v=AkK2VclgfgQ&list=PLMaD_qmwUW2645Q9uiL3OgZRaB-pXcnu3&index=12*/
+.login-bkg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 140vh;
+    width: 100%;
+    background: url(images/BKG-afb_podcastwebsite.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #0d0c1d;
+  }
+
+.login{
+    width: 27em;
+    background: transparent;
+    border: 2px solid #ffffff52;
+    backdrop-filter: blur(0.2em);
+    color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+    padding: 3.5em 2.5em 2em 2.5em;
+    margin: -65em 0 10em 33em;
+  }
+
+.login .input-box{
+    position: relative;
+    width: 80%;
+    height: 3.4em;
+    margin: 3em 0 4em 0;
+  }
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ffffff52;
+    border-radius: 50px;
+    font-size: 1em;
+    padding: 1.2em 3em 1.2em 2em;
+  }
+  
+.btn a{
+    color: #ffffff;
+    padding: 0 3em 0 3em;
+  }
+
+.input-box input::placeholder{
+    color: #ffffff;
+    font-family: 'PoppinsItalic', sans-serif;
+  }
+
+.login .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin: 0.5em 2.2em 2em 1.5em;
+  }
+
+.remember-forgot a{
+    color: aqua;
+    text-decoration: none;
+    font-family: 'PoppinsItalic', sans-serif;
+  }
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+  }
+
+.login .btn{
+    width: 90%;
+    height: 3.2em;
+    background:#232B6E;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight:350;
+    text-transform: uppercase;
+    font-family: 'Bahnschrift', Regular, sans-serif;
+    margin: 1.2em 0 0 0;
+  }
+
+.login .btn:hover{
+    background: #F86DA9
+  }
+
+.login .btn:focus{
+    background: #F86DA9
+  }
+
+.login .register-link{
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0.8em 0 0 0;
+  }
+
+.register-link p a{
+    color: aqua;
+    text-decoration: none;
+    font-family: 'PoppinsItalic', sans-serif;
+  }
+
+.register-link p a:hover{
+    text-decoration: underline;
+  }
+  /*Hier eindigt de Tutorial code*/
+  /*Eind Login pagina*/
+
+
+  /*Contact pagina*/
+  /*Ik heb voor de volgende CSScode een Tutorial gebruitk van Dan Aleko : https://www.youtube.com/watch?v=AkK2VclgfgQ&list=PLMaD_qmwUW2645Q9uiL3OgZRaB-pXcnu3&index=12*/
+.contact-tekst{
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 50vh;
+    width: 100%;
+    background: url(images/BKG-afb_podcastwebsite.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+    background-attachment: fixed;
+    background-color: #0d0c1d;
+    padding: 8em 0 0 6em;
+  }
+
+.contact{
+    width: 55em;
+    background: transparent;
+    border: 2px solid #ffffff53;
+    backdrop-filter: blur(0.2em);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 3.5em 2.5em 2em 9em;
+    margin: 33em 10em 0 15.5em;
+  }
+
+.input-box input{
+    border: 2px solid #ffffff53;
+    background-color: #232a6e46;
+    color: #ffffff;
+  }
+
+.input-box input::placeholder{
+    color: #ffffff;
+    font-family: 'PoppinsItalic', sans-serif;
+  }
+
+.contact h1{
+    font-size: 47px;
+    text-align: center;
+    margin: 0.7em 2.5em 1.7em 1em;
+    color: #F86DA9;
+  }
+
+.contact .input-box{
+    position: relative;
+    width: 80%;
+    height: 3em;
+    margin: 3em 0 4em 0;
+  }
+ 
+.btn-contact a{
+    text-decoration: none;
+    color: #ffffff;
+
+  }
+.contact .btn-contact{
+    width: 27%;
+    height: 45px;
+    background:#232B6E;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 350;
+    text-transform: uppercase;
+    font-family: 'Bahnschrift', Regular, sans-serif;
+    margin: 3.5em 10em 1em 31em;
+    padding: 1.2em 0 2em 0;
+    }
+
+.contact .btn-contact:hover{
+    background: #F86DA9
+  }
+
+.contact .btn-contact:focus{
+    background: #F86DA9;
+  }
+/*Hier eindigt de Tutorial code*/
+/*Eind Contact pagina*/
+
+
+/*Footer*/
+footer p, footer a, footer li{
+    color: #ffffff;
+    font-family: 'PoppinsItalic', sans-serif;
+    font-size: 0.9em;
+  }
+
+footer h3{
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #232B6E;
+    box-sizing: border-box;
+    padding: 3em 3em 3em 3em;
+    margin: 7em 0 0 0;
+  }
+
+footer li, footer a{
+    text-decoration: none;
+    list-style: none;
+  }
+
+.footer-tekst{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 20vw;
+    margin: 0.5em 12em 0 0;
+  }
+
+.footer-tekst img{
+    width: 8vw;
+    margin: 0 0 1em 0;
+  }
+
+.footer-paginas{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 3vw;
+    margin: 0.5em 6.5em 0 0;
+  }
+
+.footer-legal{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 3vw;
+    margin: 0.5em 13em 0 0;
+  }
+
+.footer-bereikbaarheid{
+    display: flex;
+    flex-direction: column;
+    width:18vw;
+    margin: 0.5em 1em 0 2em;
+  }
+
+.footer-socials ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 10vw;
+    margin: 0 2em 0 2em;
+  }
+
+.footer-socials img{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0.8em 0 0 1em;
+    width: 2.5vw;
+  }
+
+.footer-socials img:hover{
+    transform: scale(1.2);
+  }
+/*Eind Footer*/
